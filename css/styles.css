@@ -125,6 +125,7 @@ nav a:hover {
 
 .features article {
   flex: 1;
+  min-width: 0;
   background-color: #ffffff;
   padding: 1.5rem;
 }
