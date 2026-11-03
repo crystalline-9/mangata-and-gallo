@@ -1,0 +1,282 @@
+/* ------------------------------
+   1. Global styles
+------------------------------ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 5%;
+  background-color: #f5f2e9;
+  color: #30312f;
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* ------------------------------
+   2. Header and navigation
+------------------------------ */
+
+.logo img {
+  display: block;
+  width: 7rem;
+  height: auto;
+  margin: 2rem auto 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #30312f;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #a58b5c;
+}
+
+/* ------------------------------
+   3. Hero banner
+------------------------------ */
+
+.hero {
+  background-image:
+    linear-gradient(rgba(30, 30, 30, 0.35), rgba(30, 30, 30, 0.35)),
+    url("../images/hero/hero-editorial.jpg");
+
+  background-size: cover;
+  background-position: center;
+  min-height: 28rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #f5f2e9;
+  margin-top: 2rem;
+}
+
+.hero-content {
+  max-width: 40rem;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* ------------------------------
+   4. Buttons
+------------------------------ */
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background-color: #d6c29a;
+  color: #30312f;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #f5f2e9;
+}
+
+/* ------------------------------
+   5. Feature section
+------------------------------ */
+
+.features {
+  display: flex;
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.features article {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+
+.features article img {
+  display: block;
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.features article h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.features article p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   6. Feature card styling
+------------------------------ */
+
+.features article {
+  border-radius: 0.4rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.features article:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.features article a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #8a7045;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.features article a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------
+   7. Footer
+------------------------------ */
+
+footer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid #d6c29a;
+}
+
+.footer-logo,
+.copyright {
+  flex: 1;
+}
+
+.footer-logo img {
+  display: block;
+  width: 10rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.copyright {
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+/* ------------------------------
+   8. Responsive layout
+------------------------------ */
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+
+  .features article img {
+    height: 18rem;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    margin: 0 auto;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 0 4%;
+  }
+
+  nav a {
+    padding: 0.65rem 0.55rem;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    min-height: 23rem;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ------------------------------
+   9. Accessibility refinements
+------------------------------ */
+
+/* Make keyboard focus clearly visible */
+a:focus-visible {
+  outline: 3px solid #8a7045;
+  outline-offset: 4px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
